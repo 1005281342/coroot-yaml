@@ -1,0 +1,13 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: coroot-prometheus-server
+  namespace: coroot
+spec:
+  #volumeName: pv-coroot
+  accessModes:
+    - ReadWriteOnce
+    #- ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi

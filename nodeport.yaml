@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: coroot
+  namespace: coroot
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      nodePort: 31080
+  selector:
+    name: coroot
